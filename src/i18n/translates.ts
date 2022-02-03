@@ -1,5 +1,5 @@
 const ru = {
-    welcome: 'Хай!',
+    welcome: 'Велком!',
 };
 const en = {
     welcome: 'Welcome!',

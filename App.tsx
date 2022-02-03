@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as Localization from 'expo-localization';
+import i18n from 'i18n-js';
+
+import { ru, en } from './src/i18n/translates';
+import Home from './src/views/home';
+
+i18n.fallbacks = true;
+i18n.translations = { ru, en };
+i18n.locale = Localization.locale;
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Home />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
